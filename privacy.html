@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>プライバシーポリシー｜宇治田原つーしん（LINE）</title>
+
+  <!-- Tailwind（開発用CDN。本番は自己ホスト推奨） -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandPurple: {50:'#f5f3ff',100:'#ede9fe',200:'#ddd6fe',300:'#c4b5fd',400:'#a78bfa',500:'#8b5cf6',600:'#7c3aed',700:'#6d28d9',800:'#5b21b6',900:'#4c1d95'}
+          },
+          fontFamily: { body: ['"Noto Sans JP"','ui-sans-serif','system-ui','sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <!-- OGP（必要に応じて編集） -->
+  <meta property="og:title" content="プライバシーポリシー｜宇治田原つーしん（LINE）">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="宇治田原つーしん（LINE公式アカウント/LIFF）における個人情報の取扱いについて。">
+  <meta property="og:locale" content="ja_JP">
+
+  <style>
+    /* Safe area & ベース余白 */
+    :root{
+      --gap: clamp(16px, 6vw, 28px);
+      --padT: max(28px, calc(env(safe-area-inset-top) + 20px));
+      --padB: max(20px, env(safe-area-inset-bottom));
+      --maxW: 1000px;
+    }
+    html,body{margin:0}
+    .edge{width:min(var(--maxW), calc(100dvw - 2*var(--gap))); margin:0 auto}
+    @supports not (width: 100dvw){
+      .edge{width:min(var(--maxW), calc(100vw - 2*var(--gap)));}
+    }
+
+    /* 見出しのアンカー用オフセット（ヘッダー分） */
+    :target{ scroll-margin-top: 80px; }
+
+    /* 印刷フレンドリー */
+    @media print{
+      body{ background:#fff !important }
+      .no-print{ display:none !important }
+      .card { box-shadow:none !important; border:1px solid #ddd }
+    }
+  </style>
+
+  <!-- 構造化データ（任意で編集） -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"プライバシーポリシー｜宇治田原つーしん（LINE）",
+    "description":"宇治田原つーしん（LINE公式アカウント/LIFF）における個人情報の取扱いについて。",
+    "inLanguage":"ja"
+  }
+  </script>
+</head>
+<body class="min-h-[100dvh] bg-[#f6f9ff] font-body text-gray-900 antialiased">
+
+  <!-- ヒーロー -->
+  <header class="edge pt-[var(--padT)] pb-3 text-center">
+    <div class="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/80 px-3 py-1 text-[11px]">
+      <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="1.6" d="M12 3l9 4.5v9L12 21 3 16.5v-9L12 3Z"/></svg>
+      Privacy Policy
+    </div>
+    <h1 class="mt-2 bg-gradient-to-r from-blue-500 to-brandPurple-500 bg-clip-text text-transparent text-[26px] sm:text-3xl font-extrabold tracking-[.2px]">
+      宇治田原つーしん（LINE）プライバシーポリシー
+    </h1>
+    <p class="mt-1 text-[13px] sm:text-[14px] text-gray-700/90">本ページは、LINE公式アカウント・LIFF 等を通じた取得情報の取扱いを定めるものです。</p>
+  </header>
+
+  <!-- トップ操作 -->
+  <div class="edge no-print">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <nav class="flex-1">
+        <ul class="flex flex-wrap gap-x-3 gap-y-1 text-[13px]">
+          <li><a href="#scope" class="underline underline-offset-2">適用範囲</a></li>
+          <li><a href="#info" class="underline underline-offset-2">取得する情報</a></li>
+          <li><a href="#purposes" class="underline underline-offset-2">利用目的</a></li>
+          <li><a href="#third" class="underline underline-offset-2">第三者提供/委託</a></li>
+          <li><a href="#security" class="underline underline-offset-2">安全管理</a></li>
+          <li><a href="#rights" class="underline underline-offset-2">開示等の請求</a></li>
+          <li><a href="#cookies" class="underline underline-offset-2">クッキー/外部送信</a></li>
+          <li><a href="#retention" class="underline underline-offset-2">保有期間</a></li>
+          <li><a href="#contact" class="underline underline-offset-2">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})"
+          class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-[12px]">最下部へ</button>
+        <button onclick="window.print()" class="rounded-lg bg-gray-900 text-white px-3 py-2 text-[12px]">印刷</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 本文カード -->
+  <main class="edge my-4">
+    <div class="card rounded-xl p-[1px] bg-gradient-to-br from-blue-500/60 to-brandPurple-500/60 shadow-[0_10px_26px_rgba(2,6,23,.14)]">
+      <article class="rounded-[12px] bg-white ring-1 ring-black/10 p-5 sm:p-8 leading-[1.9] text-[15.5px] sm:text-[16px]">
+
+        <p class="text-gray-700 mb-6">
+          宇治田原つーしん（以下「当方」）は、LINE公式アカウント、LIFFアプリ、各種フォームを通じて取得する利用者に関する情報について、
+          個人情報の保護に関する法律（以下「個人情報保護法」）その他関係法令・ガイドラインに基づき、次のとおり取り扱います。
+        </p>
+
+        <section id="scope" class="scroll-mt-24">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">1. 適用範囲</h2>
+          <p>本ポリシーは、当方が運用する LINE 公式アカウント、LIFF を利用した各ページやフォーム（GitHub Pages 等で公開される関連ページを含む）に適用されます。</p>
+        </section>
+
+        <section id="info" class="mt-6 scroll-mt-24">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">2. 取得する情報</h2>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>LINE プラットフォームを通じて取得する情報（例：ユーザー識別子、表示名、友だち登録・ブロック状態、メッセージ内容・送受信日時、LIFF 経由のプロフィール情報に同意いただいた範囲）。</li>
+            <li>フォーム送信時に利用者が入力する情報（例：氏名、メールアドレス、連絡先、問い合わせ内容、添付ファイル情報等）。</li>
+            <li>端末・ブラウザ関連情報（例：IPアドレス、ユーザーエージェント、リファラ、Cookie/同等技術の識別子）。</li>
+            <li>統計情報（個人を識別しない形に加工したアクセス解析結果など）。</li>
+          </ul>
+        </section>
+
+        <section id="method" class="mt-6 scroll-mt-24">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">3. 取得方法</h2>
+          <p>取得は、LINE の Messaging API・LIFF を通じた自動取得、フォームへのご入力、Cookie等による取得等の方法で行います。取得時に個別同意が必要な場合は、画面にて同意をいただいた範囲で取得します。</p>
+        </section>
+
+        <section id="purposes" class="mt-6 scroll-mt-24">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">4. 利用目的</h2>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>お問い合わせ・ご要望への対応、本人確認、必要な連絡の実施。</li>
+            <li>各種ご案内、重要なお知らせ、キャンペーン等の配信・運営。</li>
+            <li>サービス改善、新機能の企画、利用状況の分析、不正防止・セキュリティ対策。</li>
+            <li>法令等に基づく対応。</li>
+          </ul>
+        </section>
+
+        <section id="third" class="mt-6 scroll-mt-24">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">5. 第三者提供・委託・共同利用</h2>
+          <p class="mb-2">当方は、次の場合を除き、個人情報を第三者へ提供しません。</p>
+          <ul class="list-disc pl-6 space-y-1 mb-3">
+            <li>本人の同意がある場合。</li>
+            <li>法令に基づく場合。</li>
+            <li>人の生命・身体・財産の保護のために必要で本人同意取得が困難な場合。</li>
+          </ul>
+          <p class="mb-2">当方は、円滑な業務遂行のため、取り扱いの一部を外部事業者へ委託することがあります。その際は、委託先の適切な選定・監督を行います（例：クラウドサービスの運用、アクセス解析、メール配信等）。</p>
+          <p>現時点での主な外部サービス例（実際の利用状況に応じて編集してください）：</p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>LINE プラットフォーム提供者（Messaging API / LIFF の提供・運用）</li>
+            <li>Google（Google Workspace / Google スプレッドシート / Apps Script 等の利用）</li>
+            <!-- 未使用なら削除：<li>Google Analytics（アクセス解析）</li> -->
+            <!-- 未使用なら削除：<li>GitHub Pages（Web ホスティング）</li> -->
+          </ul>
+          <p class="mt-2">共同利用は現時点で行っていません（開始する場合は、共同利用者・範囲・目的・管理責任者等を本ポリシーに追記・公表します）。</p>
+        </section>
+
+        <section id="security" class="mt-6 scroll-mt-24">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">6. 安全管理措置</h2>
+          <p>当方は、取り扱う個人情報について、アクセス制御、権限管理、暗号化、ログ管理、委託先の監督、不要となった情報の削除等、適切な安全管理措置を講じます。</p>
+        </section>
+
+        <section id="retention" class="mt-6 scroll-mt-24">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">7. 保有期間・削除</h2>
+          <p>法令等に特段の定めがある場合を除き、利用目的の達成に必要な範囲で保有し、達成後は遅滞なく削除または匿名化します。お問い合わせ情報は原則として取得から
+            <strong>1年</strong> を目安に見直し・削除します（業務上必要な場合を除く）。</p>
+        </section>
+
+        <section id="rights" class="mt-6 scroll-mt-24">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">8. 開示・訂正・利用停止等（個人情報保護法の権利）</h2>
+          <p>保有個人データについて、開示・訂正・利用停止等をご希望の場合は、本人確認のうえ、法令に基づき遅滞なく対応します。</p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>請求方法：本ページ末尾の窓口にご連絡ください。</li>
+            <li>確認事項：本人確認のための情報の提示をお願いする場合があります。</li>
+          </ul>
+        </section>
+
+        <section id="cookies" class="mt-6 scroll-mt-24">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">9. クッキー等の利用・外部送信</h2>
+          <p class="mb-2">当方は、サイトの利便性向上や統計分析のため、Cookie・類似技術を利用する場合があります。これに伴い、以下の情報が外部事業者へ送信されることがあります（利用の有無に応じて調整してください）。</p>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm border border-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="p-2 border-b">送信先</th>
+                  <th class="p-2 border-b">送信される可能性のある情報</th>
+                  <th class="p-2 border-b">利用目的</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-2 border-b">LINE プラットフォーム提供者</td>
+                  <td class="p-2 border-b">ユーザー識別子、表示名、トラッキング識別子、アクセス情報 等</td>
+                  <td class="p-2 border-b">メッセージ配信、LIFF の提供、利用状況の把握</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border-b">Google（Apps Script/Spreadsheet 等）</td>
+                  <td class="p-2 border-b">フォーム送信データ、IPアドレス、UA 等</td>
+                  <td class="p-2 border-b">問い合わせ管理、運用・分析</td>
+                </tr>
+                <!-- 使用時のみ：
+                <tr>
+                  <td class="p-2 border-b">Google Analytics</td>
+                  <td class="p-2 border-b">クッキーID、アクセスログ、端末情報 等</td>
+                  <td class="p-2 border-b">アクセス解析、サイト改善</td>
+                </tr>
+                -->
+              </tbody>
+            </table>
+          </div>
+          <p class="mt-2 text-gray-700">Cookie を無効化する方法はご利用のブラウザ設定をご確認ください。ただし、一部機能が利用できなくなる場合があります。</p>
+        </section>
+
+        <section id="minor" class="mt-6 scroll-mt-24">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">10. 未成年の方の情報</h2>
+          <p>未成年の方が情報を提供する場合、保護者の同意を得たうえで行ってください。</p>
+        </section>
+
+        <section id="revision" class="mt-6 scroll-mt-24">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">11. 改定</h2>
+          <p>本ポリシーは、法令改正やサービス内容の変更に応じて改定することがあります。重要な変更がある場合は、LINEや当方ウェブページ等でお知らせします。</p>
+        </section>
+
+        <section id="controller" class="mt-6 scroll-mt-24">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">12. 事業者等の名称</h2>
+          <p>名称：<strong>宇治田原つーしん</strong>（運営：<span class="underline decoration-dotted">（運営者名を記載）</span>）</p>
+          <p>所在地：<span class="underline decoration-dotted">（任意）</span></p>
+        </section>
+
+        <section id="contact" class="mt-6 scroll-mt-24">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">13. お問い合わせ窓口</h2>
+          <p>本ポリシー、個人情報の取扱いに関するご質問は、お問い合わせフォームへご連絡ください。</p>
+          <ul class="list-disc pl-6">
+            <li>問い合わせフォーム：<a href="https://sa-kyo.github.io/ujitu-form/" target="_blank" rel="noopener" class="underline">https://example.com/contact</a></li>
+          </ul>
+        </section>
+
+        <hr class="my-6 border-dashed">
+
+        <div class="grid gap-2 text-[13px] text-gray-600">
+          <div>制定日：2025年8月1日</div>
+          <div>最終改定日：2025年8月1日</div>
+          <p class="text-[12.5px] text-gray-500">
+          </p>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- フッター操作 -->
+  <footer class="edge pb-[var(--padB)] pt-4 no-print">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <button onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-[12px]">ページ上部へ</button>
+      <a href="/" class="rounded-lg bg-gray-900 text-white px-3 py-2 text-[12px]">サイトトップへ</a>
+    </div>
+  </footer>
+</body>
+</html>
