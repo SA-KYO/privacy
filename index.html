@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
@@ -20,11 +20,6 @@
     }
   </script>
 
-  <!-- Web フォント（太め見出しの質感を安定させる／不要なら削除可） -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
-
   <!-- OGP（必要に応じて編集） -->
   <meta property="og:title" content="プライバシーポリシー｜宇治田原つーしん（LINE）">
   <meta property="og:type" content="website">
@@ -32,9 +27,10 @@
   <meta property="og:locale" content="ja_JP">
 
   <style>
+    /* Safe area & ベース余白 */
     :root{
       --gap: clamp(16px, 6vw, 28px);
-      --padT: max(28px, calc(env(safe-area-inset-top) + 24px));
+      --padT: max(28px, calc(env(safe-area-inset-top) + 20px));
       --padB: max(20px, env(safe-area-inset-bottom));
       --maxW: 1000px;
     }
@@ -43,12 +39,14 @@
     @supports not (width: 100dvw){
       .edge{width:min(var(--maxW), calc(100vw - 2*var(--gap)));}
     }
-    /* アンカー位置調整（固定ヘッダーは無いが、余白分の補正） */
+
+    /* 見出しのアンカー用オフセット（ヘッダー分） */
     :target{ scroll-margin-top: 80px; }
 
     /* 印刷フレンドリー */
     @media print{
       body{ background:#fff !important }
+      .no-print{ display:none !important }
       .card { box-shadow:none !important; border:1px solid #ddd }
     }
   </style>
@@ -72,20 +70,18 @@
       <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="1.6" d="M12 3l9 4.5v9L12 21 3 16.5v-9L12 3Z"/></svg>
       Privacy Policy
     </div>
-    <h1 class="mt-2 bg-gradient-to-r from-blue-500 to-brandPurple-500 bg-clip-text text-transparent
-               text-[26px] sm:text-3xl font-extrabold tracking-[.2px]">
+    <h1 class="mt-2 bg-gradient-to-r from-blue-500 to-brandPurple-500 bg-clip-text text-transparent text-[26px] sm:text-3xl font-extrabold tracking-[.2px]">
       宇治田原つーしん（LINE）プライバシーポリシー
     </h1>
-    <p class="mt-1 text-[13px] sm:text-[14px] text-gray-700/90">
-      本ページは、LINE公式アカウント・LIFF 等を通じた取得情報の取扱いを定めるものです。
-    </p>
+    <p class="mt-1 text-[13px] sm:text-[14px] text-gray-700/90">本ページは、LINE公式アカウント・LIFF 等を通じた取得情報の取扱いを定めるものです。</p>
   </header>
 
-  <!-- 本文カード（※ナビとボタンは削除済み） -->
+  <!-- ※ トップ操作（セクション内ナビ／最下部へ・印刷ボタン）は削除 -->
+
+  <!-- 本文カード -->
   <main class="edge my-4">
     <div class="card rounded-xl p-[1px] bg-gradient-to-br from-blue-500/60 to-brandPurple-500/60 shadow-[0_10px_26px_rgba(2,6,23,.14)]">
-      <article class="rounded-[12px] bg-white ring-1 ring-black/10
-                     p-5 sm:p-8 leading-[1.9] text-[16px] sm:text-[16.5px]">
+      <article class="rounded-[12px] bg-white ring-1 ring-black/10 p-5 sm:p-8 leading-[1.9] text-[15.5px] sm:text-[16px]">
 
         <p class="text-gray-700 mb-6">
           宇治田原つーしん（以下「当方」）は、LINE公式アカウント、LIFFアプリ、各種フォームを通じて取得する利用者に関する情報について、
@@ -93,44 +89,37 @@
         </p>
 
         <section id="scope" class="scroll-mt-24">
-          <h2 class="text-xl font-extrabold text-gray-900 mb-2">1. 適用範囲</h2>
-          <p>本ポリシーは、当方が運用する LINE 公式アカウント、LIFF を利用した各ページやフォームに適用されます。</p>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">1. 適用範囲</h2>
+          <p>本ポリシーは、当方が運用する LINE 公式アカウント、LIFF を利用した各ページやフォームなどに適用されます。</p>
         </section>
 
         <section id="info" class="mt-6 scroll-mt-24">
-          <h2 class="text-xl font-extrabold text-gray-900 mb-2">2. 取得する情報</h2>
-
-          <h3 class="text-[17px] font-bold text-gray-800 mt-3 mb-1">ユーザーから直接ご提供いただく情報</h3>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">2. 取得する情報</h2>
           <ul class="list-disc pl-6 space-y-1">
-            <li>氏名・ニックネーム</li>
-            <li>メールアドレス</li>
-            <li>お問い合わせ内容、添付情報</li>
-          </ul>
-
-          <h3 class="text-[17px] font-bold text-gray-800 mt-4 mb-1">端末・利用状況に関する情報（自動取得）</h3>
-          <ul class="list-disc pl-6 space-y-1">
-            <li>アクセス日時、リファラ、ページURL、ユーザーエージェント</li>
-            <li>クッキー等の識別子（必要最小限）</li>
+            <li>LINE プラットフォームを通じて取得する情報（例：ユーザー識別子、表示名、友だち登録・ブロック状態、メッセージ内容・送受信日時、LIFF 経由のプロフィール情報に同意いただいた範囲）。</li>
+            <li>フォーム送信時に利用者が入力する情報（例：氏名、メールアドレス、連絡先、問い合わせ内容、添付ファイル情報等）。</li>
+            <li>端末・ブラウザ関連情報（例：IPアドレス、ユーザーエージェント、リファラ、Cookie/同等技術の識別子）。</li>
+            <li>統計情報（個人を識別しない形に加工したアクセス解析結果など）。</li>
           </ul>
         </section>
 
         <section id="method" class="mt-6 scroll-mt-24">
-          <h2 class="text-xl font-extrabold text-gray-900 mb-2">3. 取得方法</h2>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">3. 取得方法</h2>
           <p>取得は、LINE の Messaging API・LIFF を通じた自動取得、フォームへのご入力、Cookie等による取得等の方法で行います。取得時に個別同意が必要な場合は、画面にて同意をいただいた範囲で取得します。</p>
         </section>
 
         <section id="purposes" class="mt-6 scroll-mt-24">
-          <h2 class="text-xl font-extrabold text-gray-900 mb-2">4. 利用目的</h2>
-          <ol class="list-decimal pl-6 space-y-1">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">4. 利用目的</h2>
+          <ul class="list-disc pl-6 space-y-1">
             <li>お問い合わせ・ご要望への対応、本人確認、必要な連絡の実施。</li>
             <li>各種ご案内、重要なお知らせ、キャンペーン等の配信・運営。</li>
             <li>サービス改善、新機能の企画、利用状況の分析、不正防止・セキュリティ対策。</li>
             <li>法令等に基づく対応。</li>
-          </ol>
+          </ul>
         </section>
 
         <section id="third" class="mt-6 scroll-mt-24">
-          <h2 class="text-xl font-extrabold text-gray-900 mb-2">5. 第三者提供・委託・共同利用</h2>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">5. 第三者提供・委託・共同利用</h2>
           <p class="mb-2">当方は、次の場合を除き、個人情報を第三者へ提供しません。</p>
           <ul class="list-disc pl-6 space-y-1 mb-3">
             <li>本人の同意がある場合。</li>
@@ -142,18 +131,18 @@
         </section>
 
         <section id="security" class="mt-6 scroll-mt-24">
-          <h2 class="text-xl font-extrabold text-gray-900 mb-2">6. 安全管理措置</h2>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">6. 安全管理措置</h2>
           <p>当方は、取り扱う個人情報について、アクセス制御、権限管理、暗号化、ログ管理、委託先の監督、不要となった情報の削除等、適切な安全管理措置を講じます。</p>
         </section>
 
         <section id="retention" class="mt-6 scroll-mt-24">
-          <h2 class="text-xl font-extrabold text-gray-900 mb-2">7. 保有期間・削除</h2>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">7. 保有期間・削除</h2>
           <p>法令等に特段の定めがある場合を除き、利用目的の達成に必要な範囲で保有し、達成後は遅滞なく削除または匿名化します。お問い合わせ情報は原則として取得から
             <strong>1年</strong> を目安に見直し・削除します（業務上必要な場合を除く）。</p>
         </section>
 
         <section id="rights" class="mt-6 scroll-mt-24">
-          <h2 class="text-xl font-extrabold text-gray-900 mb-2">8. 開示・訂正・利用停止等（個人情報保護法の権利）</h2>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">8. 開示・訂正・利用停止等（個人情報保護法の権利）</h2>
           <p>保有個人データについて、開示・訂正・利用停止等をご希望の場合は、本人確認のうえ、法令に基づき遅滞なく対応します。</p>
           <ul class="list-disc pl-6 space-y-1">
             <li>請求方法：本ページ末尾の窓口にご連絡ください。</li>
@@ -162,15 +151,15 @@
         </section>
 
         <section id="cookies" class="mt-6 scroll-mt-24">
-          <h2 class="text-xl font-extrabold text-gray-900 mb-2">9. クッキー等の利用・外部送信</h2>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">9. クッキー等の利用・外部送信</h2>
           <p class="mb-2">当方は、サイトの利便性向上や統計分析のため、Cookie・類似技術を利用する場合があります。これに伴い、以下の情報が外部事業者へ送信されることがあります（利用の有無に応じて調整してください）。</p>
           <div class="overflow-x-auto">
-            <table class="w-full text-[15px] border border-gray-200">
+            <table class="w-full text-sm border border-gray-200">
               <thead class="bg-gray-50">
                 <tr>
-                  <th class="p-2 border-b text-left">送信先</th>
-                  <th class="p-2 border-b text-left">送信される可能性のある情報</th>
-                  <th class="p-2 border-b text-left">利用目的</th>
+                  <th class="p-2 border-b">送信先</th>
+                  <th class="p-2 border-b">送信される可能性のある情報</th>
+                  <th class="p-2 border-b">利用目的</th>
                 </tr>
               </thead>
               <tbody>
@@ -184,6 +173,13 @@
                   <td class="p-2 border-b">フォーム送信データ、IPアドレス、UA 等</td>
                   <td class="p-2 border-b">問い合わせ管理、運用・分析</td>
                 </tr>
+                <!-- 使用時のみ：
+                <tr>
+                  <td class="p-2 border-b">Google Analytics</td>
+                  <td class="p-2 border-b">クッキーID、アクセスログ、端末情報 等</td>
+                  <td class="p-2 border-b">アクセス解析、サイト改善</td>
+                </tr>
+                -->
               </tbody>
             </table>
           </div>
@@ -191,22 +187,22 @@
         </section>
 
         <section id="minor" class="mt-6 scroll-mt-24">
-          <h2 class="text-xl font-extrabold text-gray-900 mb-2">10. 未成年の方の情報</h2>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">10. 未成年の方の情報</h2>
           <p>未成年の方が情報を提供する場合、保護者の同意を得たうえで行ってください。</p>
         </section>
 
         <section id="revision" class="mt-6 scroll-mt-24">
-          <h2 class="text-xl font-extrabold text-gray-900 mb-2">11. 改定</h2>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">11. 改定</h2>
           <p>本ポリシーは、法令改正やサービス内容の変更に応じて改定することがあります。重要な変更がある場合は、LINEや当方ウェブページ等でお知らせします。</p>
         </section>
 
         <section id="controller" class="mt-6 scroll-mt-24">
-          <h2 class="text-xl font-extrabold text-gray-900 mb-2">12. 事業者等の名称</h2>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">12. 事業者等の名称</h2>
           <p>名称：<strong>宇治田原つーしん</strong></p>
         </section>
 
         <section id="contact" class="mt-6 scroll-mt-24">
-          <h2 class="text-xl font-extrabold text-gray-900 mb-2">13. お問い合わせ窓口</h2>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">13. お問い合わせ窓口</h2>
           <p>本ポリシー、個人情報の取扱いに関するご質問は、次の窓口へご連絡ください。</p>
           <ul class="list-disc pl-6">
             <li>問い合わせフォーム：<a href="https://sa-kyo.github.io/ujitu-form/" target="_blank" rel="noopener" class="underline">https://sa-kyo.github.io/ujitu-form/</a></li>
@@ -226,8 +222,8 @@
     </div>
   </main>
 
-  <!-- フッター操作（ページトップ／サイトトップ） -->
-  <footer class="edge pb-[var(--padB)] pt-4">
+  <!-- フッター操作 -->
+  <footer class="edge pb-[var(--padB)] pt-4 no-print">
     <div class="flex flex-wrap items-center justify-between gap-3">
       <button onclick="window.scrollTo({top:0,behavior:'smooth'})"
         class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-[12px]">ページ上部へ</button>
